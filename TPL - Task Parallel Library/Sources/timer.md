@@ -1,5 +1,5 @@
 ## Datei Program.cs
-```
+```C#
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,7 +28,7 @@ namespace Timer
             Task task = new Task(
                 () => t.Start(),
                 /* Wir sagen dem Scheduler, dass der Task
-                 * nicht aufhören wird. */
+                 * nicht aufhÃ¶ren wird. */
                 TaskCreationOptions.LongRunning);
             /* Jetzt wird der Task gestartet. Der Timer
              * beginnt zu arbeiten. */
@@ -43,11 +43,11 @@ namespace Timer
                     Console.WriteLine("100 000 erreicht.");
                 }
             }
-            /* Das müssen WIR ALS PROGRAMMIERER implementieren.
-             * Es gibt kein Task.Stop(), um den Abbruch müssen
-             * wir uns selbst kümmern. */
+            /* Das mÃ¼ssen WIR ALS PROGRAMMIERER implementieren.
+             * Es gibt kein Task.Stop(), um den Abbruch mÃ¼ssen
+             * wir uns selbst kÃ¼mmern. */
             t.Stop();
-            /* Wenn das nicht wäre, dann warten wir nicht, bis
+            /* Wenn das nicht wÃ¤re, dann warten wir nicht, bis
              * unser Task auch sauber beendet wurde. Beim 
              * Schreiben von Files fatal! */
             task.Wait();
@@ -60,7 +60,7 @@ namespace Timer
 ```
 
 ## Datei MyTimer.cs
-```
+```C#
 using System;
 using System.Collections.Generic;
 using System.Linq;
