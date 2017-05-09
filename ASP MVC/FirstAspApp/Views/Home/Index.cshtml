@@ -1,0 +1,25 @@
+﻿@model FirstAspApp.Models.ViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        <h1>Mein Name ist @Html.Raw(Model.Name)</h1>
+        @using (Html.BeginForm())
+        {
+            @Html.TextBoxFor(m => m.Name)
+            <input type="submit" value="Senden" />
+        }
+
+    </div>
+</body>
+</html>
